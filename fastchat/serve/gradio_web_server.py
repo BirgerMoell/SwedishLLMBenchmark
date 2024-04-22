@@ -55,26 +55,12 @@ controller_url = None
 enable_moderation = False
 
 acknowledgment_md = """
-### Terms of Service
 
-Users are required to agree to the following terms before using the service:
+### Användarvillkor
+Användare måste godkänna följande villkor innan de använder tjänsten:
 
-The service is a research preview. It only provides limited safety measures and may generate offensive content.
-It must not be used for any illegal, harmful, violent, racist, or sexual purposes.
-Please do not upload any private information.
-The service collects user dialogue data, including both text and images, and reserves the right to distribute it under a Creative Commons Attribution (CC-BY) or a similar license.
+Tjänsten är en forskningsförhandsvisning. Den erbjuder endast begränsade säkerhetsåtgärder och kan generera stötande innehåll. Den får inte användas i något olagligt, skadligt, våldsamt, rasistiskt eller sexuellt syfte. Vänligen ladda inte upp någon privat information. Tjänsten samlar in användardialogdata, inklusive både text och bilder, och förbehåller sig rätten att distribuera detta under en Creative Commons Erkännande-licens (CC-BY) eller en liknande licens.
 
-### Acknowledgment
-We thank [Kaggle](https://www.kaggle.com/), [MBZUAI](https://mbzuai.ac.ae/), [a16z](https://www.a16z.com/), [Together AI](https://www.together.ai/), [Anyscale](https://www.anyscale.com/), [HuggingFace](https://huggingface.co/) for their generous [sponsorship](https://lmsys.org/donations/).
-
-<div class="sponsor-image-about">
-    <img src="https://storage.googleapis.com/public-arena-asset/kaggle.png" alt="Kaggle">
-    <img src="https://storage.googleapis.com/public-arena-asset/mbzuai.jpeg" alt="MBZUAI">
-    <img src="https://storage.googleapis.com/public-arena-asset/a16z.jpeg" alt="a16z">
-    <img src="https://storage.googleapis.com/public-arena-asset/together.png" alt="Together AI">
-    <img src="https://storage.googleapis.com/public-arena-asset/anyscale.png" alt="AnyScale">
-    <img src="https://storage.googleapis.com/public-arena-asset/huggingface.png" alt="HuggingFace">
-</div>
 """
 
 # JSON file format of API-based models:
@@ -608,35 +594,25 @@ def get_model_description_md(models):
 def build_about():
     about_markdown = """
 # About Us
-Chatbot Arena is an open-source research project developed by members from [LMSYS](https://lmsys.org/about/) and UC Berkeley [SkyLab](https://sky.cs.berkeley.edu/).  Our mission is to build an open crowdsourced platform to collect human feedback and evaluate LLMs under real-world scenarios. We open-source our [FastChat](https://github.com/lm-sys/FastChat) project at GitHub and release chat and human feedback datasets [here](https://github.com/lm-sys/FastChat/blob/main/docs/dataset_release.md). We invite everyone to join us in this journey!
+Swedish Chatbot Arena is an open-source research project developed by researcher at KTH Royal Institute of Technology.
+
+ Our mission is to build an open crowdsourced platform to collect human feedback and evaluate LLMs under real-world scenarios. We open-source our [Swedish LLM Benchmark](https://github.com/BirgerMoell/SwedishLLMBenchmark/tree/main) project at GitHub and we plan to release chatbot datasets once they are collected. We invite everyone to join us in this journey!
 
 ## Read More
 - Chatbot Arena [launch post](https://lmsys.org/blog/2023-05-03-arena/), [data release](https://lmsys.org/blog/2023-07-20-dataset/)
 - LMSYS-Chat-1M [report](https://arxiv.org/abs/2309.11998)
 
 ## Core Members
-[Lianmin Zheng](https://lmzheng.net/), [Wei-Lin Chiang](https://infwinston.github.io/), [Ying Sheng](https://sites.google.com/view/yingsheng/home), [Siyuan Zhuang](https://scholar.google.com/citations?user=KSZmI5EAAAAJ)
+[Birger Moëll](https://lmzheng.net/), [Gustav Eje Henter](https://infwinston.github.io/), [Ying Sheng](https://sites.google.com/view/yingsheng/home), [Siyuan Zhuang](https://scholar.google.com/citations?user=KSZmI5EAAAAJ)
 
 ## Advisors
 [Ion Stoica](http://people.eecs.berkeley.edu/~istoica/), [Joseph E. Gonzalez](https://people.eecs.berkeley.edu/~jegonzal/), [Hao Zhang](https://cseweb.ucsd.edu/~haozhang/)
 
 ## Contact Us
-- Follow our [Twitter](https://twitter.com/lmsysorg), [Discord](https://discord.gg/HSWAKCrnFx) or email us at lmsys.org@gmail.com
+- Joun us on Discord [Discord](https://discord.gg/ngUT5ZAe) or email us at lmsys.org@gmail.com
 - File issues on [GitHub](https://github.com/lm-sys/FastChat)
 - Download our datasets and models on [HuggingFace](https://huggingface.co/lmsys)
 
-## Acknowledgment
-We thank [SkyPilot](https://github.com/skypilot-org/skypilot) and [Gradio](https://github.com/gradio-app/gradio) team for their system support.
-We also thank [Kaggle](https://www.kaggle.com/), [MBZUAI](https://mbzuai.ac.ae/), [a16z](https://www.a16z.com/), [Together AI](https://www.together.ai/), [Anyscale](https://www.anyscale.com/), [HuggingFace](https://huggingface.co/) for their generous sponsorship. Learn more about partnership [here](https://lmsys.org/donations/).
-
-<div class="sponsor-image-about">
-    <img src="https://storage.googleapis.com/public-arena-asset/kaggle.png" alt="Kaggle">
-    <img src="https://storage.googleapis.com/public-arena-asset/mbzuai.jpeg" alt="MBZUAI">
-    <img src="https://storage.googleapis.com/public-arena-asset/a16z.jpeg" alt="a16z">
-    <img src="https://storage.googleapis.com/public-arena-asset/together.png" alt="Together AI">
-    <img src="https://storage.googleapis.com/public-arena-asset/anyscale.png" alt="AnyScale">
-    <img src="https://storage.googleapis.com/public-arena-asset/huggingface.png" alt="HuggingFace">
-</div>
 """
     gr.Markdown(about_markdown, elem_id="about_markdown")
 
@@ -655,7 +631,7 @@ def build_single_model_ui(models, add_promotion_links=False):
     )
 
     notice_markdown = f"""
-# 🏔️ Chat with Open Large Language Models
+# 🇸🇪 Chatta med stora språkmodeller på svenska
 {promotion}
 """
 

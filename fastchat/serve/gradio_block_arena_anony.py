@@ -618,19 +618,19 @@ def bot_response_multi(
 
 def build_side_by_side_ui_anony(models):
     notice_markdown = """
-# ⚔️  Chatbot Arena: Benchmarking LLMs in the Wild
-| [Blog](https://lmsys.org/blog/2023-05-03-arena/) | [GitHub](https://github.com/lm-sys/FastChat) | [Paper](https://arxiv.org/abs/2306.05685) | [Dataset](https://github.com/lm-sys/FastChat/blob/main/docs/dataset_release.md) | [Twitter](https://twitter.com/lmsysorg) | [Discord](https://discord.gg/HSWAKCrnFx) |
+# 🇸🇪⚔️🫎 Svensk Chatbot Arena: Utvärdering av LLM i en verklig miljö.
+  <img src="https://i.ibb.co/hZR9fhR/swedish-llm-benchmark.png" alt="Moose Logo" style="width:200px;height:200px;">
 
-## 📜 Rules
-- Ask any question to two anonymous models (e.g., ChatGPT, Claude, Llama) and vote for the better one!
-- You can continue chatting until you identify a winner.
-- Vote won't be counted if model identity is revealed during conversation.
+## 📜 Regler
+Ställ frågor till två anonyma modeller (t.ex. ChatGPT, Claude, Llama) och rösta på den bästa!
+Du kan fortsätta chatta tills en vinnare utses.
+Röster räknas inte om modellens identitet avslöjas under konversatione
 
-## 🏆 Arena Elo&nbsp;[Leaderboard](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard)
-We collect **200K+** human votes to compute an Elo-based LLM leaderboard.
-Find out who is the 🥇LLM Champion!
+## 🏆 Arena Elo Ledartavla
+Vi samlar in mänskliga röster för att skapa en Elo-baserad LLM-ledartavla.
+Ta reda på vem som är 🥇LLM-mästaren!
 
-## 👇 Chat now!
+## 👇 Chatta nu!
 """
 
     states = [gr.State() for _ in range(num_sides)]

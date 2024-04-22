@@ -111,7 +111,7 @@ window.__gradio_mode__ = "app";
         """
 
     with gr.Blocks(
-        title="Chat with Open Large Language Models",
+        title="Chat with Open Large Language Models på Svenska",
         theme=gr.themes.Default(text_size=text_size),
         css=block_css,
         head=head_js,

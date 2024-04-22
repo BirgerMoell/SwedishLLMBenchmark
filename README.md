@@ -1,5 +1,13 @@
-# FastChat
-| [**Demo**](https://chat.lmsys.org/) | [**Discord**](https://discord.gg/HSWAKCrnFx) | [**X**](https://x.com/lmsysorg) |
+# Swedish LLM Arean
+This project is a Fork of FastChat focused on Swedish LLMs.
+
+## Running the project
+
+
+
+
+
+
 
 FastChat is an open platform for training, serving, and evaluating large language model based chatbots.
 - FastChat powers Chatbot Arena (https://chat.lmsys.org/), serving over 10 million chat requests for 70+ LLMs.
